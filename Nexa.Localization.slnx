@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="README.ar.md" />
+    <File Path="README.ckb.md" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="Nexa.Localization.Console/Nexa.Localization.Console.csproj" Id="0d771532-eccd-43b8-9408-9f8dbfa76e93" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="CHANGELOG.md" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Nexa.Localization.SourceGenerator/">
+    <Project Path="scr/Nexa.Localization.SourceGenerator/Nexa.Localization.SourceGenerator.csproj" />
+  </Folder>
+  <Folder Name="/src/Nexa.Localization/">
+    <Project Path="scr/Nexa.Localization/Nexa.Localization.csproj" />
+  </Folder>
+  <Folder Name="/Test/">
+    <Project Path="Nexa.Localization.Tests/Nexa.Localization.Tests.csproj" />
+  </Folder>
+</Solution>

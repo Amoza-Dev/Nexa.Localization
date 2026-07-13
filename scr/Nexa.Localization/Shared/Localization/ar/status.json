@@ -1,0 +1,20 @@
+{
+  "status.active": "نشط",
+  "status.inactive": "غير نشط",
+  "status.pending": "قيد الانتظار",
+  "status.approved": "موافق عليه",
+  "status.rejected": "مرفوض",
+  "status.draft": "مسودة",
+  "status.published": "منشور",
+  "status.archived": "مؤرشف",
+  "status.loading": "جار التحميل...",
+  "status.processing": "جار المعالجة...",
+  "status.completed": "مكتمل",
+  "status.cancelled": "ملغى",
+  "status.failed": "فشل",
+  "status.paid": "مدفوع",
+  "status.unpaid": "غير مدفوع",
+  "status.refunded": "مسترد",
+  "status.online": "متصل",
+  "status.offline": "غير متصل"
+}

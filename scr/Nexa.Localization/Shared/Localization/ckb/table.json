@@ -1,0 +1,12 @@
+{
+  "table.id": "ژمارە",
+  "table.actions": "کارەکان",
+  "table.noData": "داتایەک نییە",
+  "table.total": "کۆی گشتی",
+  "table.showing": "پیشاندانی {0} لە {1}",
+  "table.perPage": "لە هەر پەڕەدا",
+  "table.page": "پەڕە",
+  "table.sortBy": "ڕیزکردن بە",
+  "table.ascending": "زیاتر بۆ کەمتر",
+  "table.descending": "کەمتر بۆ زیاتر"
+}

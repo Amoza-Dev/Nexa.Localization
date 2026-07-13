@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		
+		<AssemblyName>Nexa.Localization</AssemblyName>
+		<!-- Version -->
+		<Version>1.0.0</Version>
+		<PackageVersion>1.0.0</PackageVersion>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+
+		<!-- Package -->
+		<PackageId>Nexa.Localization</PackageId>
+		<Title>Nexa.Localization</Title>
+
+		<Authors>Ahmed Wali</Authors>
+		<Company>Nexa Localization Framework By D-Soft</Company>
+
+		<Product>Nexa.Localization</Product>
+
+		<Description>
+			High-performance JSON localization framework for .NET applications.
+		</Description>
+
+		<PackageTags>
+			localization;json;i18n;globalization;blazor;winforms;wpf;maui;aspnetcore
+		</PackageTags>
+
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+
+		<RepositoryType>git</RepositoryType>
+
+		<LangVersion>latest</LangVersion>
+		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<AdditionalFiles Include="Shared\Localization\**\*.json" />
+	</ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0" />
+		<PackageReference Include="System.Text.Json" Version="10.0.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Nexa.Localization.SourceGenerator\Nexa.Localization.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
+</Project>

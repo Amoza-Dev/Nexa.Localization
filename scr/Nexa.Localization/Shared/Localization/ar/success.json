@@ -1,0 +1,16 @@
+{
+  "success.saved": "تم الحفظ",
+  "success.created": "تم الإنشاء",
+  "success.updated": "تم التحديث",
+  "success.deleted": "تم الحذف",
+  "success.sent": "تم الإرسال",
+  "success.uploaded": "تم الرفع",
+  "success.copied": "تم النسخ",
+  "success.loggedIn": "تم تسجيل الدخول",
+  "success.loggedOut": "تم تسجيل الخروج",
+  "success.registered": "تم التسجيل",
+  "success.passwordChanged": "تم تغيير كلمة المرور",
+  "success.profileUpdated": "تم تحديث الملف الشخصي",
+  "success.approved": "تمت الموافقة",
+  "success.rejected": "تم الرفض"
+}

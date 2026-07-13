@@ -1,0 +1,16 @@
+{
+  "success.saved": "پاشەکەوتکرا",
+  "success.created": "دروستکرا",
+  "success.updated": "نوێکرایەوە",
+  "success.deleted": "سڕایەوە",
+  "success.sent": "نارد",
+  "success.uploaded": "بارکرا",
+  "success.copied": "کۆپیکرا",
+  "success.loggedIn": "چووتەژوورەوە",
+  "success.loggedOut": "چووتەدەرەوە",
+  "success.registered": "تۆمارکرایت",
+  "success.passwordChanged": "وشەی نهێنی گۆڕا",
+  "success.profileUpdated": "پرۆفایل نوێکرایەوە",
+  "success.approved": "مۆڵەتدرا",
+  "success.rejected": "ڕەتکرایەوە"
+}

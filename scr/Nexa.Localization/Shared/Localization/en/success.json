@@ -1,0 +1,16 @@
+{
+  "success.saved": "Saved successfully",
+  "success.created": "Created successfully",
+  "success.updated": "Updated successfully",
+  "success.deleted": "Deleted successfully",
+  "success.sent": "Sent successfully",
+  "success.uploaded": "Uploaded successfully",
+  "success.copied": "Copied to clipboard",
+  "success.loggedIn": "Logged in successfully",
+  "success.loggedOut": "Logged out successfully",
+  "success.registered": "Registered successfully",
+  "success.passwordChanged": "Password changed successfully",
+  "success.profileUpdated": "Profile updated successfully",
+  "success.approved": "Approved successfully",
+  "success.rejected": "Rejected successfully"
+}

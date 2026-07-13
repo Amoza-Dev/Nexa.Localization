@@ -1,0 +1,21 @@
+{
+  "nav.home": "الرئيسية",
+  "nav.dashboard": "لوحة التحكم",
+  "nav.profile": "الملف الشخصي",
+  "nav.settings": "الإعدادات",
+  "nav.notifications": "الإشعارات",
+  "nav.messages": "الرسائل",
+  "nav.reports": "التقارير",
+  "nav.analytics": "التحليلات",
+  "nav.users": "المستخدمون",
+  "nav.products": "المنتجات",
+  "nav.orders": "الطلبات",
+  "nav.categories": "الفئات",
+  "nav.blog": "المدونة",
+  "nav.about": "عن",
+  "nav.contact": "تواصل",
+  "nav.help": "مساعدة",
+  "nav.faq": "الأسئلة الشائعة",
+  "nav.terms": "الشروط",
+  "nav.privacy": "الخصوصية"
+}

@@ -1,0 +1,15 @@
+{
+  "time.today": "اليوم",
+  "time.yesterday": "أمس",
+  "time.tomorrow": "غداً",
+  "time.thisWeek": "هذا الأسبوع",
+  "time.lastWeek": "الأسبوع الماضي",
+  "time.thisMonth": "هذا الشهر",
+  "time.lastMonth": "الشهر الماضي",
+  "time.thisYear": "هذا العام",
+  "time.ago": "منذ",
+  "time.justNow": "الآن",
+  "time.minutesAgo": "منذ {0} دقائق",
+  "time.hoursAgo": "منذ {0} ساعات",
+  "time.daysAgo": "منذ {0} أيام"
+}
