@@ -1,0 +1,11 @@
+{
+  "lang.select": "Select Language",
+  "lang.ckb": "Kurdish",
+  "lang.ar": "Arabic",
+  "lang.en": "English",
+  "dir.rtl": "Right to Left",
+  "dir.ltr": "Left to Right",
+  "theme.dark": "Dark",
+  "theme.light": "Light",
+  "theme.system": "System"
+}

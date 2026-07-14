@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\Localization\ar\buttons.json" />
+    <Content Remove="Shared\Localization\ar\errors.json" />
+    <Content Remove="Shared\Localization\ar\forms.json" />
+    <Content Remove="Shared\Localization\ar\language.json" />
+    <Content Remove="Shared\Localization\ar\navigation.json" />
+    <Content Remove="Shared\Localization\ar\status.json" />
+    <Content Remove="Shared\Localization\ar\success.json" />
+    <Content Remove="Shared\Localization\ar\table.json" />
+    <Content Remove="Shared\Localization\ar\time.json" />
+    <Content Remove="Shared\Localization\ar\user.json" />
+    <Content Remove="Shared\Localization\ar\warnings.json" />
+    <Content Remove="Shared\Localization\ckb\buttons.json" />
+    <Content Remove="Shared\Localization\ckb\errors.json" />
+    <Content Remove="Shared\Localization\ckb\forms.json" />
+    <Content Remove="Shared\Localization\ckb\language.json" />
+    <Content Remove="Shared\Localization\ckb\navigation.json" />
+    <Content Remove="Shared\Localization\ckb\status.json" />
+    <Content Remove="Shared\Localization\ckb\success.json" />
+    <Content Remove="Shared\Localization\ckb\table.json" />
+    <Content Remove="Shared\Localization\ckb\time.json" />
+    <Content Remove="Shared\Localization\ckb\user.json" />
+    <Content Remove="Shared\Localization\ckb\warnings.json" />
+    <Content Remove="Shared\Localization\en\buttons.json" />
+    <Content Remove="Shared\Localization\en\errors.json" />
+    <Content Remove="Shared\Localization\en\forms.json" />
+    <Content Remove="Shared\Localization\en\language.json" />
+    <Content Remove="Shared\Localization\en\navigation.json" />
+    <Content Remove="Shared\Localization\en\status.json" />
+    <Content Remove="Shared\Localization\en\success.json" />
+    <Content Remove="Shared\Localization\en\table.json" />
+    <Content Remove="Shared\Localization\en\time.json" />
+    <Content Remove="Shared\Localization\en\user.json" />
+    <Content Remove="Shared\Localization\en\warnings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Shared\Localization\ar\buttons.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\errors.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\forms.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\language.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\navigation.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\status.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\success.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\table.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\time.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\user.json" />
+    <AdditionalFiles Include="Shared\Localization\ar\warnings.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\buttons.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\errors.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\forms.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\language.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\navigation.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\status.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\success.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\table.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\time.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\user.json" />
+    <AdditionalFiles Include="Shared\Localization\ckb\warnings.json" />
+    <AdditionalFiles Include="Shared\Localization\en\buttons.json" />
+    <AdditionalFiles Include="Shared\Localization\en\errors.json" />
+    <AdditionalFiles Include="Shared\Localization\en\forms.json" />
+    <AdditionalFiles Include="Shared\Localization\en\language.json" />
+    <AdditionalFiles Include="Shared\Localization\en\navigation.json" />
+    <AdditionalFiles Include="Shared\Localization\en\status.json" />
+    <AdditionalFiles Include="Shared\Localization\en\success.json" />
+    <AdditionalFiles Include="Shared\Localization\en\table.json" />
+    <AdditionalFiles Include="Shared\Localization\en\time.json" />
+    <AdditionalFiles Include="Shared\Localization\en\user.json" />
+    <AdditionalFiles Include="Shared\Localization\en\warnings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\scr\Nexa.Localization.SourceGenerator\Nexa.Localization.SourceGenerator.csproj" />
+    <ProjectReference Include="..\scr\Nexa.Localization\Nexa.Localization.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -2,7 +2,7 @@
 using Nexa.Localization.SourceGenerator.Models;
 using Nexa.Localization.SourceGenerator.Parsing;
 
-namespace Nexa.Localization.Tests.Parsing;
+namespace Nexa.Localization.SourceGenerator.Tests.Parsing;
 
 public sealed class JsonParserTests
 {

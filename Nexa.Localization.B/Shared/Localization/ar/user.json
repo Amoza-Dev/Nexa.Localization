@@ -1,0 +1,19 @@
+{
+  "user.welcome": "مرحباً",
+  "user.profile": "الملف الشخصي",
+  "user.account": "الحساب",
+  "user.myOrders": "طلباتي",
+  "user.myProfile": "ملفي الشخصي",
+  "user.changePassword": "تغيير كلمة المرور",
+  "user.deleteAccount": "حذف الحساب",
+  "user.role.admin": "مسؤول",
+  "user.role.editor": "محرر",
+  "user.role.user": "مستخدم",
+  "user.role.guest": "ضيف",
+  "user.lastLogin": "آخر تسجيل دخول",
+  "user.joinDate": "تاريخ الانضمام",
+  "user.forgotPassword": "نسيت كلمة المرور؟",
+  "user.rememberMe": "تذكرني",
+  "user.noAccount": "ليس لديك حساب؟",
+  "user.hasAccount": "لديك حساب؟"
+}

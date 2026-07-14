@@ -1,0 +1,15 @@
+{
+  "time.today": "ئەمڕۆ",
+  "time.yesterday": "دوێنێ",
+  "time.tomorrow": "سبەینێ",
+  "time.thisWeek": "ئەم هەفتەیە",
+  "time.lastWeek": "هەفتەی ڕابردوو",
+  "time.thisMonth": "ئەم مانگەیە",
+  "time.lastMonth": "مانگی ڕابردوو",
+  "time.thisYear": "ئەمساڵ",
+  "time.ago": "پێشتر",
+  "time.justNow": "ئێستا",
+  "time.minutesAgo": "{0} خولەک پێشتر",
+  "time.hoursAgo": "{0} کاتژمێر پێشتر",
+  "time.daysAgo": "{0} ڕۆژ پێشتر"
+}

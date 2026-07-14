@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace Nexa.Localization.SourceGenerator.Parsing;
 
-internal static class JsonParser
+public static class JsonParser
 {
     public static JsonFile Parse(string path, string json)
     {

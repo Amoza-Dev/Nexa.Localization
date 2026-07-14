@@ -1,8 +1,8 @@
 ﻿# Nexa.Localization
 
-A high-performance, enterprise-ready localization framework for modern .NET applications.
+A modern, high-performance localization framework for .NET.
 
-**Nexa.Localization** is a lightweight, fast, and extensible localization framework for .NET. It provides JSON-based localization, strongly typed localization keys powered by Source Generators, runtime language switching, startup validation, dependency injection, and a clean architecture independent of any UI framework.
+**Nexa.Localization** is a lightweight, strongly typed localization framework powered by JSON resources and Roslyn Incremental Source Generators. It provides compile-time localization keys, runtime language switching, dependency injection, startup validation, and a clean architecture that works across multiple .NET platforms.
 
 ---
 
@@ -13,27 +13,30 @@ A high-performance, enterprise-ready localization framework for modern .NET appl
 - JSON-based localization
 - Strongly typed localization keys
 - Runtime language switching
-- Language Manager
-- Culture persistence
+- Multiple language support
+- Fallback culture support
 - Right-to-left (RTL) support
 
 ### Performance
 
-- High performance
+- High-performance localization lookup
 - Thread-safe localization cache
 - Startup validation
+- Minimal allocations
 
 ### Developer Experience
 
 - Incremental Source Generator
-- Compile-time validation
-- Dependency Injection support
 - IntelliSense support
+- Compile-time safety
 - Refactoring friendly
+- No magic strings
+- Dependency Injection integration
 
 ### Architecture
 
 - Clean Architecture
+- Cross-platform
 - UI framework independent
 - Extensible provider architecture
 
@@ -51,27 +54,15 @@ A high-performance, enterprise-ready localization framework for modern .NET appl
 
 ---
 
-## Installation
+# Installation
 
-Install the NuGet package.
-
-```powershell
-Install-Package Nexa.Localization
-```
-
-or
+Install the runtime package.
 
 ```bash
 dotnet add package Nexa.Localization
 ```
 
-For strongly typed localization keys, install the Source Generator package.
-
-```powershell
-Install-Package Nexa.Localization.SourceGenerator
-```
-
-or
+Install the Source Generator.
 
 ```bash
 dotnet add package Nexa.Localization.SourceGenerator
@@ -79,186 +70,223 @@ dotnet add package Nexa.Localization.SourceGenerator
 
 ---
 
-## Quick Start
+# Quick Start
 
-### Register localization
+## 1. Register Services
 
 ```csharp
 builder.Services.AddNexaLocalization(options =>
 {
-    options.DefaultCulture = "en";
+    options.DefaultCulture = "ckb";
     options.FallbackCulture = "en";
 
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "en",
-        Name = "English",
-        NativeName = "English"
-    });
-
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "ku",
-        Name = "Kurdish",
-        NativeName = "کوردی",
-        IsRightToLeft = false
-    });
-
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "ar",
-        Name = "Arabic",
-        NativeName = "العربية",
-        IsRightToLeft = true
-    });
+    options.AddDefaultLanguages();
 });
 ```
 
-Load localization resources during application startup.
+---
+
+## 2. Initialize Localization
 
 ```csharp
-await localizationLoader.LoadAsync();
+var app = builder.Build();
 
-await languageManager.InitializeAsync();
+await app.Services.InitializeNexaLocalizationAsync();
 
-validator.Validate();
+app.Run();
 ```
 
 ---
 
-## Usage
-
-Inject the localization service.
-
-```csharp
-@inject ILocalizationService L
-```
-
-Use strongly typed localization keys.
-
-```csharp
-<h1>@L[Nexa.Buttons.Save]</h1>
-
-<button>@L[Nexa.Buttons.Cancel]</button>
-
-<span>@L[Nexa.Menu.Dashboard]</span>
-```
-
----
-
-## Localization Structure
+# Localization Structure
 
 ```
 Shared/
 └── Localization/
-    ├── en/
-    │   ├── buttons.json
-    │   ├── menu.json
-    │   └── errors.json
+    ├── ckb/
+    │   ├── button.json
+    │   ├── status.json
+    │   ├── invoice.json
+    │   └── ...
     │
-    ├── ku/
-    │   ├── buttons.json
-    │   ├── menu.json
-    │   └── errors.json
+    ├── en/
+    │   ├── button.json
+    │   ├── status.json
+    │   ├── invoice.json
+    │   └── ...
     │
     └── ar/
-        ├── buttons.json
-        ├── menu.json
-        └── errors.json
+        ├── button.json
+        ├── status.json
+        ├── invoice.json
+        └── ...
 ```
 
 Example:
 
 ```json
 {
-  "Buttons.Save": "Save",
-  "Buttons.Cancel": "Cancel",
-  "Menu.Dashboard": "Dashboard"
+  "button.save": "Save",
+  "button.cancel": "Cancel"
 }
 ```
 
 ---
 
-## Source Generator
+# Using Generated Keys
 
-Nexa.Localization.SourceGenerator automatically generates strongly typed localization keys during compilation.
+Simply use the generated localization keys.
 
-Example:
+```razor
+<h3>@NexaKeys.Button.Save</h3>
 
-```csharp
-Nexa.Buttons.Save
+<button>@NexaKeys.Button.Cancel</button>
 
-Nexa.Buttons.Cancel
-
-Nexa.Menu.Dashboard
-
-Nexa.Errors.NotFound
+<span>@NexaKeys.Status.Active</span>
 ```
 
-### Benefits
-
-- IntelliSense
-- Compile-time safety
-- Refactoring support
-- No magic strings
-- Better performance
-- Reduced typing errors
+No service injection is required.
 
 ---
 
-## Architecture
+# Source Generator
+
+The Incremental Source Generator automatically generates strongly typed localization keys.
+
+Generated example:
+
+```csharp
+NexaKeys.Button.Save
+
+NexaKeys.Button.Cancel
+
+NexaKeys.Status.Active
+
+NexaKeys.Invoice.Create.Success
+```
+
+## Benefits
+
+- IntelliSense
+- Compile-time safety
+- No magic strings
+- Refactoring friendly
+- Better performance
+
+---
+
+# Configuration
+
+```csharp
+builder.Services.AddNexaLocalization(options =>
+{
+    options.DefaultCulture = "ckb";
+
+    options.FallbackCulture = "en";
+
+    options.EnableCaching = true;
+
+    options.ValidateOnStartup = true;
+
+    options.ThrowIfKeyNotFound = false;
+
+    options.ReloadOnChange = false;
+
+    options.AddDefaultLanguages();
+});
+```
+
+---
+
+# Supported Language Helpers
+
+```csharp
+options.AddKurdish();
+
+options.AddEnglish();
+
+options.AddArabic();
+
+options.AddDefaultLanguages();
+```
+
+Or register your own language.
+
+```csharp
+options.AddLanguage(
+    code: "fr",
+    name: "French",
+    nativeName: "Français");
+```
+
+---
+
+# Project Structure
 
 ```
 Nexa.Localization
 │
 ├── Abstractions
 ├── Caching
-├── Components
 ├── Exceptions
 ├── Extensions
 ├── Helpers
 ├── Models
 ├── Providers
+├── Runtime
 ├── Services
+├── Storage
 └── Validation
 ```
 
-The runtime is completely independent of any UI framework.
-
-Platform-specific integrations are provided through separate packages.
+Platform-specific integrations are distributed as separate packages.
 
 ---
 
-## Roadmap
+# Packages
+
+| Package | Description |
+|---------|-------------|
+| Nexa.Localization | Core localization framework |
+| Nexa.Localization.SourceGenerator | Strongly typed localization keys |
+| Nexa.Localization.Blazor *(Coming Soon)* | Blazor integration |
+| Nexa.Localization.WinForms *(Planned)* | WinForms integration |
+| Nexa.Localization.WPF *(Planned)* | WPF integration |
+| Nexa.Localization.MAUI *(Planned)* | .NET MAUI integration |
+
+---
+
+# Roadmap
 
 ### Version 1.x
 
-- Nexa.Localization.Blazor
-- Nexa.Localization.AspNetCore
-- Nexa.Localization.WinForms
-- Nexa.Localization.WPF
-- Nexa.Localization.MAUI
+- Blazor integration
+- WinForms integration
+- WPF integration
+- MAUI integration
 - Cookie language storage
-- LocalStorage language storage
+- Browser LocalStorage
+- Session storage
 - Database language storage
-- Embedded resource localization
-- Project localization overriding
+- Embedded resource provider
+- Project resource overriding
 - Performance benchmarks
 
 ---
 
-## Documentation
+# Documentation
 
-Documentation will be available in the `docs` directory.
+Documentation includes:
 
 - Getting Started
+- Installation
 - Configuration
 - Source Generator
-- Architecture
-- API Reference
+- Runtime API
+- Best Practices
 - Samples
 
-Documentation will be provided in:
+Documentation will be available in:
 
 - English
 - Kurdish
@@ -266,7 +294,7 @@ Documentation will be provided in:
 
 ---
 
-## License
+# License
 
 Licensed under the MIT License.
 

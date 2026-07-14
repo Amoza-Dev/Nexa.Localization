@@ -1,0 +1,20 @@
+{
+  "status.active": "چالاک",
+  "status.inactive": "نەچالاک",
+  "status.pending": "چاوەڕوانە",
+  "status.approved": "مۆڵەتدراو",
+  "status.rejected": "ڕەتکراوەتەوە",
+  "status.draft": "پێشنووس",
+  "status.published": "بڵاوکراوەتەوە",
+  "status.archived": "ئەرشیفکراوە",
+  "status.loading": "چاوەڕوانبە...",
+  "status.processing": "کارپێکردنی...",
+  "status.completed": "تەواوبوو",
+  "status.cancelled": "هەڵوەشاوەتەوە",
+  "status.failed": "سەرنەکەوت",
+  "status.paid": "پارەدراو",
+  "status.unpaid": "پارەنەدراو",
+  "status.refunded": "گەڕاوەتەوە",
+  "status.online": "ئۆنلاین",
+  "status.offline": "ئۆفلاین"
+}

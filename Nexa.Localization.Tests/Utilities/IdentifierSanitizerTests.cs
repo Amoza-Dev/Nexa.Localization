@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Nexa.Localization.SourceGenerator.Utilities;
 
-namespace Nexa.Localization.Tests.Utilities;
+namespace Nexa.Localization.SourceGenerator.Tests.Utilities;
 
 public sealed class IdentifierSanitizerTests
 {

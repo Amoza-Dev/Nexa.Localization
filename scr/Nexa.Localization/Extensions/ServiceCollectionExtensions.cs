@@ -12,7 +12,7 @@ namespace Nexa.Localization.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddNexatLocalization(
+    public static IServiceCollection AddNexaLocalization(
         this IServiceCollection services,
         Action<LocalizationOptions>? configure = null)
     {

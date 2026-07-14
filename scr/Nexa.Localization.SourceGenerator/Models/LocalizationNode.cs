@@ -13,9 +13,10 @@ public sealed class LocalizationNode
 
     public bool IsLeaf { get; set; }
 
-    public LocalizationNode(string name)
+    public LocalizationNode(string name, LocalizationNode? parent = null)
     {
         Name = name;
+        Parent = parent;
 
         Children = new Dictionary<string, LocalizationNode>(
             StringComparer.OrdinalIgnoreCase);

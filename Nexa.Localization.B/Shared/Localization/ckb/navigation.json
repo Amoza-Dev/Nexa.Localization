@@ -1,0 +1,21 @@
+{
+  "nav.home": "سەرەتا",
+  "nav.dashboard": "داشبۆرد",
+  "nav.profile": "پرۆفایل",
+  "nav.settings": "ڕێکخستنەکان",
+  "nav.notifications": "ئاگادارکردنەوەکان",
+  "nav.messages": "نامەکان",
+  "nav.reports": "ڕاپۆرتەکان",
+  "nav.analytics": "شیکارکردن",
+  "nav.users": "بەکارهێنەران",
+  "nav.products": "بەرهەمەکان",
+  "nav.orders": "ئۆردەرەکان",
+  "nav.categories": "بەشەکان",
+  "nav.blog": "بلاگ",
+  "nav.about": "دەربارەی",
+  "nav.contact": "پەیوەندی",
+  "nav.help": "یارمەتی",
+  "nav.faq": "پرسیارە باوەکان",
+  "nav.terms": "مەرجەکان",
+  "nav.privacy": "تایبەتمەندی"
+}

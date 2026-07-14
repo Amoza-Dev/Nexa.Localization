@@ -1,0 +1,19 @@
+{
+  "user.welcome": "بەخێربێیت",
+  "user.profile": "پرۆفایل",
+  "user.account": "هەژمار",
+  "user.myOrders": "ئۆردەرەکانم",
+  "user.myProfile": "پرۆفایلەکەم",
+  "user.changePassword": "گۆڕینی وشەی نهێنی",
+  "user.deleteAccount": "سڕینەوەی هەژمار",
+  "user.role.admin": "بەڕێوەبەر",
+  "user.role.editor": "دەستکاریکەر",
+  "user.role.user": "بەکارهێنەر",
+  "user.role.guest": "میوان",
+  "user.lastLogin": "دوا چوونەژوورەوە",
+  "user.joinDate": "بەرواری پەیوەستبوون",
+  "user.forgotPassword": "وشەی نهێنیت لەبیرکردوە؟",
+  "user.rememberMe": "لەبیرم بگرە",
+  "user.noAccount": "هەژمارت نییە؟",
+  "user.hasAccount": "هەژماری هەیە؟"
+}

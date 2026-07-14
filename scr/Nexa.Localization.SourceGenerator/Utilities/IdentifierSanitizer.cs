@@ -2,7 +2,7 @@
 
 namespace Nexa.Localization.SourceGenerator.Utilities;
 
-internal static class IdentifierSanitizer
+public static class IdentifierSanitizer
 {
     public static string Sanitize(string value)
     {

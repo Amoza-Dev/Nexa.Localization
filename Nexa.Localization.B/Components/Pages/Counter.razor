@@ -1,0 +1,23 @@
+﻿@page "/counter"
+@inject ILocalizationService L
+@using Nexa.Localization.Generated
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<p>@NexaKeys.Button.Add</p>
+<p>@NexaKeys.Button.Edit</p>
+<p>@L[NexaKeys.Button.Add]</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

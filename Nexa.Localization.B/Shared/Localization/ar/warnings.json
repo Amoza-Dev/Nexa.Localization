@@ -1,0 +1,8 @@
+{
+  "warning.deleteConfirm": "هل أنت متأكد من الحذف؟",
+  "warning.unsavedChanges": "توجد تغييرات غير محفوظة",
+  "warning.leaveConfirm": "هل تريد المغادرة؟",
+  "warning.irreversible": "هذا الإجراء لا يمكن التراجع عنه",
+  "warning.lowStock": "المخزون منخفض",
+  "warning.sessionExpiringSoon": "ستنتهي جلستك قريباً"
+}

@@ -1,65 +1,68 @@
 ﻿# Nexa.Localization
 
-إطار عمل سريع وعالي الأداء لإدارة الترجمة (Localization) لتطبيقات .NET.
+**Nexa.Localization** هو إطار عمل حديث وسريع لإدارة الترجمة (Localization) في تطبيقات .NET.
 
-**Nexa.Localization** هو إطار عمل خفيف، سريع وقابل للتوسع لإدارة اللغات المتعددة في تطبيقات .NET. يعتمد على ملفات JSON، ويولّد مفاتيح ترجمة **Strongly Typed** باستخدام **Source Generator**، ويدعم تغيير اللغة أثناء التشغيل، مع بنية نظيفة ومستقلة عن أي إطار عمل لواجهة المستخدم.
+يوفر الإطار نظام ترجمة يعتمد على ملفات JSON، ومفاتيح ترجمة قوية (Strongly Typed Localization Keys) يتم إنشاؤها تلقائياً باستخدام Roslyn Incremental Source Generator، بالإضافة إلى تغيير اللغة أثناء التشغيل (Runtime)، ودعم Dependency Injection، والتحقق من صحة الإعدادات عند بدء التشغيل، مع بنية نظيفة ومستقلة عن أي إطار عمل للواجهات.
 
 ---
 
-## ✨ المميزات
+# المميزات
 
-### 🌍 الترجمة
+## الترجمة (Localization)
 
 - الترجمة باستخدام ملفات JSON
-- مفاتيح ترجمة Strongly Typed
-- تغيير اللغة أثناء التشغيل (Runtime)
-- Language Manager
-- حفظ اللغة المختارة
+- مفاتيح ترجمة قوية (Strongly Typed Keys)
+- تغيير اللغة أثناء التشغيل
+- دعم تعدد اللغات
+- دعم لغة احتياطية (Fallback Culture)
 - دعم اللغات من اليمين إلى اليسار (RTL)
-
-### ⚡ الأداء
-
-- أداء عالي
-- ذاكرة تخزين مؤقت (Cache) آمنة للخيوط (Thread-safe)
-- التحقق من صحة الملفات عند بدء التشغيل
-
-### 🛠 تجربة المطور
-
-- Incremental Source Generator
-- التحقق أثناء وقت الترجمة (Compile-time Validation)
-- دعم Dependency Injection
-- دعم IntelliSense
-- دعم إعادة هيكلة الكود (Refactoring)
-
-### 🏗 البنية
-
-- Clean Architecture
-- مستقل عن أي إطار عمل لواجهة المستخدم
-- بنية قابلة للتوسع باستخدام Provider Architecture
 
 ---
 
-## 💻 المنصات المدعومة
+## الأداء
+
+- أداء عالي
+- Thread-safe Localization Cache
+- التحقق من صحة الإعدادات عند بدء التشغيل
+- أقل استهلاك ممكن للذاكرة
+
+---
+
+## تجربة المطور
+
+- Incremental Source Generator
+- دعم IntelliSense
+- أمان وقت الترجمة (Compile-time Safety)
+- سهل إعادة الهيكلة (Refactoring Friendly)
+- بدون Magic Strings
+- تكامل كامل مع Dependency Injection
+
+---
+
+## البنية
+
+- Clean Architecture
+- Cross-platform
+- مستقل عن أي UI Framework
+- بنية قابلة للتوسعة (Extensible Provider Architecture)
+
+---
+
+# المنصات المدعومة
 
 - ASP.NET Core
 - Blazor
 - WinForms
 - WPF
 - .NET MAUI
-- تطبيقات Console
+- Console Applications
 - Class Libraries
 
 ---
 
-## 📦 التثبيت
+# التثبيت
 
-تثبيت المكتبة الأساسية:
-
-```powershell
-Install-Package Nexa.Localization
-```
-
-أو
+تثبيت الحزمة الأساسية:
 
 ```bash
 dotnet add package Nexa.Localization
@@ -67,207 +70,242 @@ dotnet add package Nexa.Localization
 
 تثبيت Source Generator:
 
-```powershell
-Install-Package Nexa.Localization.SourceGenerator
-```
-
-أو
-
 ```bash
 dotnet add package Nexa.Localization.SourceGenerator
 ```
 
 ---
 
-## 🚀 البدء السريع
+# البدء السريع
 
-### 1. تسجيل خدمات Localization
+## 1. تسجيل الخدمات
 
 ```csharp
 builder.Services.AddNexaLocalization(options =>
 {
-    options.DefaultCulture = "en";
+    options.DefaultCulture = "ckb";
     options.FallbackCulture = "en";
 
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "en",
-        Name = "English",
-        NativeName = "English"
-    });
-
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "ku",
-        Name = "Kurdish",
-        NativeName = "کوردی",
-        IsRightToLeft = false
-    });
-
-    options.SupportedLanguages.Add(new Language
-    {
-        Code = "ar",
-        Name = "Arabic",
-        NativeName = "العربية",
-        IsRightToLeft = true
-    });
+    options.AddDefaultLanguages();
 });
 ```
 
-### 2. تحميل ملفات الترجمة
+---
+
+## 2. تهيئة نظام الترجمة
 
 ```csharp
-await localizationLoader.LoadAsync();
+var app = builder.Build();
 
-await languageManager.InitializeAsync();
+await app.Services.InitializeNexaLocalizationAsync();
 
-validator.Validate();
+app.Run();
 ```
 
 ---
 
-## 📖 الاستخدام
-
-قم بحقن خدمة Localization.
-
-```csharp
-@inject ILocalizationService L
-```
-
-ثم استخدم مفاتيح الترجمة Strongly Typed.
-
-```csharp
-<h1>@L[Nexa.Buttons.Save]</h1>
-
-<button>@L[Nexa.Buttons.Cancel]</button>
-
-<span>@L[Nexa.Menu.Dashboard]</span>
-```
-
----
-
-## 📂 بنية ملفات الترجمة
+# هيكل ملفات الترجمة
 
 ```
 Shared/
 └── Localization/
-    ├── en/
-    │   ├── buttons.json
-    │   ├── menu.json
-    │   └── errors.json
+    ├── ckb/
+    │   ├── button.json
+    │   ├── status.json
+    │   ├── invoice.json
+    │   └── ...
     │
-    ├── ku/
-    │   ├── buttons.json
-    │   ├── menu.json
-    │   └── errors.json
+    ├── en/
+    │   ├── button.json
+    │   ├── status.json
+    │   ├── invoice.json
+    │   └── ...
     │
     └── ar/
-        ├── buttons.json
-        ├── menu.json
-        └── errors.json
+        ├── button.json
+        ├── status.json
+        ├── invoice.json
+        └── ...
 ```
 
 مثال:
 
 ```json
 {
-  "Buttons.Save": "حفظ",
-  "Buttons.Cancel": "إلغاء",
-  "Menu.Dashboard": "لوحة التحكم"
+  "button.save": "حفظ",
+  "button.cancel": "إلغاء"
 }
 ```
 
 ---
 
-## ⚙️ Source Generator
+# استخدام المفاتيح المولدة
 
-يقوم **Nexa.Localization.SourceGenerator** تلقائياً بإنشاء مفاتيح الترجمة Strongly Typed أثناء عملية البناء (Build).
+يكفي استخدام المفاتيح التي يتم توليدها تلقائياً.
+
+```razor
+<h3>@NexaKeys.Button.Save</h3>
+
+<button>@NexaKeys.Button.Cancel</button>
+
+<span>@NexaKeys.Status.Active</span>
+```
+
+لا حاجة لحقن (`Inject`) خدمة `ILocalizationService`.
+
+---
+
+# Source Generator
+
+يقوم Incremental Source Generator بإنشاء مفاتيح الترجمة تلقائياً أثناء عملية البناء.
 
 مثال:
 
 ```csharp
-Nexa.Buttons.Save
+NexaKeys.Button.Save
 
-Nexa.Buttons.Cancel
+NexaKeys.Button.Cancel
 
-Nexa.Menu.Dashboard
+NexaKeys.Status.Active
 
-Nexa.Errors.NotFound
+NexaKeys.Invoice.Create.Success
 ```
-
-### الفوائد
-
-- IntelliSense
-- الأمان أثناء الترجمة (Compile-time Safety)
-- دعم إعادة هيكلة الكود
-- التخلص من Magic Strings
-- أداء أفضل
-- تقليل أخطاء الكتابة
 
 ---
 
-## 🏗 بنية المشروع
+## الفوائد
+
+- IntelliSense
+- Compile-time Safety
+- Refactoring Friendly
+- بدون Magic Strings
+- أداء أفضل
+
+---
+
+# الإعدادات
+
+```csharp
+builder.Services.AddNexaLocalization(options =>
+{
+    options.DefaultCulture = "ckb";
+
+    options.FallbackCulture = "en";
+
+    options.EnableCaching = true;
+
+    options.ValidateOnStartup = true;
+
+    options.ThrowIfKeyNotFound = false;
+
+    options.ReloadOnChange = false;
+
+    options.AddDefaultLanguages();
+});
+```
+
+---
+
+# إضافة اللغات
+
+إضافة اللغات الافتراضية:
+
+```csharp
+options.AddKurdish();
+
+options.AddEnglish();
+
+options.AddArabic();
+
+options.AddDefaultLanguages();
+```
+
+أو إضافة لغة مخصصة:
+
+```csharp
+options.AddLanguage(
+    code: "fr",
+    name: "French",
+    nativeName: "Français");
+```
+
+---
+
+# هيكل المشروع
 
 ```
 Nexa.Localization
 │
 ├── Abstractions
 ├── Caching
-├── Components
 ├── Exceptions
 ├── Extensions
 ├── Helpers
 ├── Models
 ├── Providers
+├── Runtime
 ├── Services
+├── Storage
 └── Validation
 ```
 
-المكتبة الأساسية مستقلة تماماً عن أي إطار عمل لواجهة المستخدم.
-
-أما التكامل مع المنصات المختلفة فيتم توفيره من خلال حزم مستقلة.
+يتم توفير تكامل كل منصة من خلال حزم مستقلة.
 
 ---
 
-## 🗺 خارطة الطريق
+# الحزم
 
-### الإصدار 1.x
+| الحزمة | الوصف |
+|---------|--------|
+| Nexa.Localization | إطار العمل الأساسي |
+| Nexa.Localization.SourceGenerator | إنشاء مفاتيح ترجمة قوية |
+| Nexa.Localization.Blazor *(قريباً)* | تكامل مع Blazor |
+| Nexa.Localization.WinForms *(مخطط له)* | دعم WinForms |
+| Nexa.Localization.WPF *(مخطط له)* | دعم WPF |
+| Nexa.Localization.MAUI *(مخطط له)* | دعم .NET MAUI |
 
-- Nexa.Localization.Blazor
-- Nexa.Localization.AspNetCore
-- Nexa.Localization.WinForms
-- Nexa.Localization.WPF
-- Nexa.Localization.MAUI
+---
+
+# خارطة الطريق
+
+## الإصدار 1.x
+
+- دعم Blazor
+- دعم WinForms
+- دعم WPF
+- دعم MAUI
 - Cookie Language Storage
-- LocalStorage Language Storage
-- Database Language Storage
-- Embedded Resource Localization
-- Project Localization Override
+- Browser LocalStorage
+- Session Storage
+- Database Storage
+- Embedded Resource Provider
+- Resource Overriding
 - Performance Benchmarks
 
 ---
 
-## 📚 التوثيق
+# التوثيق
 
-سيتم توفير التوثيق الكامل داخل مجلد `docs`.
+سيتضمن التوثيق:
 
 - البدء السريع
-- الإعداد
+- التثبيت
+- الإعدادات
 - Source Generator
-- بنية المشروع
-- مرجع API
+- Runtime API
+- أفضل الممارسات
 - أمثلة عملية
 
-يتوفر التوثيق باللغات التالية:
+وسيتوفر باللغات:
 
-- English
-- کوردی
-- العربية
+- 🇬🇧 English
+- 🇹🇯 Kurdish
+- 🇸🇦 العربية
 
 ---
 
-## 📄 الترخيص
+# الترخيص
 
-هذا المشروع مرخّص بموجب **MIT License**.
+هذا المشروع مرخص بموجب **MIT License**.
 
-يرجى مراجعة ملف **LICENSE** لمزيد من التفاصيل.
+لمزيد من التفاصيل، راجع ملف **LICENSE**.

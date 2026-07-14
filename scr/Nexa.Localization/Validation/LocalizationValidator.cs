@@ -51,6 +51,12 @@ public sealed class LocalizationValidator : ILocalizationValidator
     }
     private void ValidateSupportedLanguages()
     {
+        if (_options.SupportedLanguages.Count == 0)
+        {
+            throw new InvalidLocalizationConfigurationException(
+                "No supported languages have been configured.");
+        }
+
         var duplicates = _options.SupportedLanguages
             .GroupBy(x => x.Code, StringComparer.OrdinalIgnoreCase)
             .Where(x => x.Count() > 1)
@@ -70,7 +76,7 @@ public sealed class LocalizationValidator : ILocalizationValidator
             if (!_cache.ContainsCulture(language.Code))
             {
                 throw new InvalidLocalizationConfigurationException(
-                    $"Localization resources for '{language.Code}' were not loaded.");
+                    $"Localization resources for culture '{language.Code}' were not found. Ensure that JSON localization files exist and are included in the project.");
             }
         }
     }

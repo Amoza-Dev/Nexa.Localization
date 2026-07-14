@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nexa.Localization.SourceGenerator.Builders;
 
-internal sealed class LocalizationTreeBuilder
+public sealed class LocalizationTreeBuilder
 {
     public LocalizationTree Build(IEnumerable<JsonFile> files)
     {

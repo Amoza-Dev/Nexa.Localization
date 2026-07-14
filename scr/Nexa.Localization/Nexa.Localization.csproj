@@ -42,6 +42,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<AdditionalFiles Include="Shared\Localization\**\*.json" />
+		<EmbeddedResource Include="Shared\Localization\**\*.json" />
 	</ItemGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />

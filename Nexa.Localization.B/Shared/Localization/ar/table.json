@@ -1,0 +1,12 @@
+{
+  "table.id": "الرقم",
+  "table.actions": "الإجراءات",
+  "table.noData": "لا توجد بيانات",
+  "table.total": "الإجمالي",
+  "table.showing": "عرض {0} من {1}",
+  "table.perPage": "في كل صفحة",
+  "table.page": "الصفحة",
+  "table.sortBy": "فرز حسب",
+  "table.ascending": "تصاعدي",
+  "table.descending": "تنازلي"
+}

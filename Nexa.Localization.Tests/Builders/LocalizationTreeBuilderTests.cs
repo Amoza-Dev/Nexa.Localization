@@ -2,7 +2,7 @@
 using Nexa.Localization.SourceGenerator.Builders;
 using Nexa.Localization.SourceGenerator.Models;
 
-namespace Nexa.Localization.Tests.Builders;
+namespace Nexa.Localization.SourceGenerator.Tests.Builders;
 
 public sealed class LocalizationTreeBuilderTests
 {
