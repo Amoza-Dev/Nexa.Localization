@@ -1,0 +1,10 @@
+{
+  "message.ActionRequired": "Action required to proceed.",
+  "message.FeatureNotAvailable": "This feature is currently not available.",
+  "message.Loading": "Loading... Please wait.",
+  "message.NoData": "No data available.",
+  "message.PleaseWait": "Please wait...",
+  "message.Processing": "Processing...",
+  "message.UnderMaintenance": "The system is currently under maintenance. We will be back soon.",
+  "message.Welcome": "Welcome to our system."
+}
