@@ -1,0 +1,19 @@
+{
+  "user.welcome": "Welcome",
+  "user.profile": "Profile",
+  "user.account": "Account",
+  "user.myOrders": "My Orders",
+  "user.myProfile": "My Profile",
+  "user.changePassword": "Change Password",
+  "user.deleteAccount": "Delete Account",
+  "user.role.admin": "Admin",
+  "user.role.editor": "Editor",
+  "user.role.user": "User",
+  "user.role.guest": "Guest",
+  "user.lastLogin": "Last Login",
+  "user.joinDate": "Join Date",
+  "user.forgotPassword": "Forgot Password?",
+  "user.rememberMe": "Remember Me",
+  "user.noAccount": "Don't have an account?",
+  "user.hasAccount": "Already have an account?"
+}
