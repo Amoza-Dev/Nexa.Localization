@@ -1,8 +1,0 @@
-{
-  "warning.deleteConfirm": "Are you sure you want to delete?",
-  "warning.unsavedChanges": "You have unsaved changes",
-  "warning.leaveConfirm": "Are you sure you want to leave?",
-  "warning.irreversible": "This action cannot be undone",
-  "warning.lowStock": "Low stock",
-  "warning.sessionExpiringSoon": "Your session is about to expire"
-}

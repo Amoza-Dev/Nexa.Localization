@@ -1,0 +1,18 @@
+{
+  "authz.AccessDenied": "تم رفض الوصول",
+  "authz.ActionNotAllowed": "هذا الإجراء غير مسموح به لحسابك.",
+  "authz.Administrator": "المدير العام",
+  "authz.ApiKeyInvalid": "مفتاح API غير صالح أو انتهت صلاحيته.",
+  "authz.Authorized": "مصرح له",
+  "authz.IPBlocked": "عنوان IP الخاص بك محظور لأسباب أمنية.",
+  "authz.Manager": "المدير",
+  "authz.Moderator": "المشرف",
+  "authz.NoPermission": "ليس لديك الصلاحيات الكافية لعرض هذه الصفحة.",
+  "authz.PermissionDenied": "تم رفض طلبك لعدم وجود الصلاحية الكافية.",
+  "authz.RequiresApproval": "يتطلب هذا الإجراء موافقة الإدارة أولاً.",
+  "authz.RoleRequired": "يتطلب هذا القسم دور {0}.",
+  "authz.SuperAdmin": "المدير الفائق",
+  "authz.TokenInvalid": "رمز التفويض (Token) غير صالح.",
+  "authz.Unauthorized": "غير مصرح له",
+  "authz.User": "المستخدم"
+}

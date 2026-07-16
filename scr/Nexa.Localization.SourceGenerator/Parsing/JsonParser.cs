@@ -37,6 +37,7 @@ public static class JsonParser
         var normalizedPath = LocalizationPath.Normalize(path);
 
         var culture = LocalizationPath.GetCulture(normalizedPath);
+
         return new JsonFile(
             normalizedPath,
             culture,

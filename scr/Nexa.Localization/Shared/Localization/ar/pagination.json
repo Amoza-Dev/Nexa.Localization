@@ -1,0 +1,18 @@
+{
+  "pagination.All": "الكل",
+  "pagination.First": "الصفحة الأولى",
+  "pagination.GoToPage": "الذهاب إلى الصفحة",
+  "pagination.Items": "العناصر",
+  "pagination.JumpTo": "الانتقال إلى",
+  "pagination.Last": "الصفحة الأخيرة",
+  "pagination.Next": "الصفحة التالية",
+  "pagination.NoData": "لا توجد بيانات لعرضها.",
+  "pagination.Of": "من",
+  "pagination.Page": "الصفحة",
+  "pagination.Previous": "الصفحة السابقة",
+  "pagination.RowsPerPage": "الصفوف لكل صفحة:",
+  "pagination.Showing": "عرض",
+  "pagination.ShowingRange": "عرض {0} إلى {1} من أصل {2} سجلات",
+  "pagination.To": "إلى",
+  "pagination.TotalRecords": "إجمالي السجلات: {0}"
+}

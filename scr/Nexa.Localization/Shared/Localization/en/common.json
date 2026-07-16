@@ -1,0 +1,18 @@
+{
+  "common.AppName": "Our System",
+  "common.Version": "Version",
+  "common.Copyright": "All rights reserved by D-Soft.",
+  "common.PoweredBy": "Powered by D-Soft",
+  "common.Description": "Description",
+  "common.Language": "Language",
+  "common.Theme": "Theme",
+  "common.Dark": "Dark",
+  "common.Light": "Light",
+  "common.System": "System",
+  "common.Default": "Default",
+  "common.Custom": "Custom",
+  "common.Welcome": "Welcome",
+  "common.Goodbye": "Goodbye",
+  "common.Id": "ID",
+  "common.Unknown": "Unknown"
+}

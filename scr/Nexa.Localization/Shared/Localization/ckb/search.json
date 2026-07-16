@@ -1,0 +1,18 @@
+{
+  "search.AdvancedSearch": "گەڕانی پێشکەوتوو",
+  "search.ClearHistory": "پاککردنەوەی مێژووی گەڕان",
+  "search.MinCharacters": "تکایە لانی کەم {0} پیت بنووسە بۆ گەڕان.",
+  "search.NoResults": "هیچ ئەنجامێک نەدۆزرایەوە.",
+  "search.RecentSearches": "گەڕانەکانی ئەم دواییە",
+  "search.ResultsCount": "{0} ئەنجام دۆزرایەوە",
+  "search.DefaultSearch": "گەڕان",
+  "search.SearchAll": "گەڕان لە هەموو بەشەکاندا",
+  "search.SearchBy": "گەڕان بەپێی",
+  "search.SearchFilters": "پاڵاوەرەکانی گەڕان",
+  "search.SearchHere": "لێرە بگەڕێ...",
+  "search.Searching": "لە گەڕاندایە...",
+  "search.SearchPlaceholder": "بگەڕێ...",
+  "search.SearchResults": "ئەنجامەکانی گەڕان",
+  "search.Suggestions": "پێشنیازەکان",
+  "search.TypeToSearch": "بنووسە بۆ گەڕان..."
+}

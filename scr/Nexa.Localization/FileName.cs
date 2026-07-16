@@ -12,7 +12,7 @@ namespace Nexa.Localization
     {
         public void test()
         {
-            var key = NexaKeys.Button.Add;
+            var key = NexaKeys.Common.PoweredBy;
             //var a = NexaKeys.Status.Offline;
         }
     }

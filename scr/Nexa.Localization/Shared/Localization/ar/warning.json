@@ -1,0 +1,10 @@
+{
+  "warning.AccessLevel": "يرجى الحذر، تعديل هذا القسم سيؤثر على النظام بأكمله.",
+  "warning.BetaFeature": "هذه ميزة تجريبية (Beta)، قد تواجه بعض المشاكل.",
+  "warning.DeleteConfirmation": "لا يمكن التراجع عن هذا الإجراء.",
+  "warning.LowBattery": "مستوى البطارية منخفض.",
+  "warning.SessionExpiring": "ستنتهي صلاحية الجلسة قريباً.",
+  "warning.SlowConnection": "اتصال الإنترنت بطيء. قد لا تعمل بعض الميزات بشكل صحيح.",
+  "warning.StorageAlmostFull": "مساحة التخزين ممتلئة تقريباً.",
+  "warning.UnsavedChanges": "لديك تغييرات غير محفوظة. هل أنت متأكد من مغادرة الصفحة؟"
+}

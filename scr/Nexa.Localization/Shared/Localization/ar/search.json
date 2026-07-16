@@ -1,0 +1,18 @@
+{
+  "search.AdvancedSearch": "البحث المتقدم",
+  "search.ClearHistory": "مسح سجل البحث",
+  "search.MinCharacters": "يرجى كتابة {0} أحرف على الأقل للبحث.",
+  "search.NoResults": "لم يتم العثور على نتائج.",
+  "search.RecentSearches": "عمليات البحث الأخيرة",
+  "search.ResultsCount": "تم العثور على {0} من النتائج",
+  "search.DefaultSearch": "بحث",
+  "search.SearchAll": "البحث في الكل",
+  "search.SearchBy": "البحث حسب",
+  "search.SearchFilters": "فلاتر البحث",
+  "search.SearchHere": "ابحث هنا...",
+  "search.Searching": "جاري البحث...",
+  "search.SearchPlaceholder": "ابحث...",
+  "search.SearchResults": "نتائج البحث",
+  "search.Suggestions": "الاقتراحات",
+  "search.TypeToSearch": "اكتب للبحث..."
+}

@@ -1,0 +1,18 @@
+{
+  "file.AllowedFormats": "الصيغ المسموح بها: {0}",
+  "file.Attachment": "مرفق",
+  "file.Attachments": "المرفقات",
+  "file.ChooseFile": "اختيار ملف",
+  "file.DeleteFile": "حذف الملف",
+  "file.Download": "تحميل",
+  "file.DragAndDrop": "اسحب الملفات وأفلتها هنا",
+  "file.DefaultFile": "ملف",
+  "file.FileName": "اسم الملف",
+  "file.Files": "ملفات",
+  "file.FileSize": "حجم الملف",
+  "file.FileType": "نوع الملف",
+  "file.MaxFileSize": "الحد الأقصى لحجم الملف: {0}",
+  "file.Upload": "رفع",
+  "file.UploadFailed": "فشل رفع الملف.",
+  "file.UploadSuccess": "تم رفع الملف بنجاح."
+}

@@ -32,10 +32,10 @@ public sealed class LocalizationTreeBuilder
         {
             if (!current.Children.TryGetValue(part, out var child))
             {
-                child = new LocalizationNode(part);
-
-                // ⭐⭐⭐ ئەمە هۆکاری کێشەکەت بوو
-                child.Parent = current;
+                child = new LocalizationNode(part)
+                {
+                    Parent = current
+                };
 
                 current.Children.Add(part, child);
             }

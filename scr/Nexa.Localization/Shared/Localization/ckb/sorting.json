@@ -1,0 +1,18 @@
+{
+  "sorting.Alphabetical": "بەپێی ئەلفوبێ",
+  "sorting.Ascending": "سەرکەوتوو (کەم بۆ زۆر)",
+  "sorting.ClearSort": "لادانی ڕیزکردن",
+  "sorting.Descending": "دابەزێو (زۆر بۆ کەم)",
+  "sorting.DragToSort": "ڕابکێشە بۆ ڕیزکردن",
+  "sorting.MostPopular": "پڕبینەرترین / ناسراوترین",
+  "sorting.Newest": "نوێترین",
+  "sorting.Oldest": "کۆنترین",
+  "sorting.PriceHighToLow": "نرخ: لە زۆرەوە بۆ کەم",
+  "sorting.PriceLowToHigh": "نرخ: لە کەمەوە بۆ زۆر",
+  "sorting.Rating": "بەپێی نرخاندن (Rating)",
+  "sorting.RecentlyUpdated": "تازە نوێکراوەتەوە",
+  "sorting.Relevance": "پەیوەندیدارترین",
+  "sorting.Sort": "ڕیزکردن",
+  "sorting.SortBy": "ڕیزکردن بەپێی",
+  "sorting.SortOrder": "ڕیزبەندیی ڕیزکردن"
+}

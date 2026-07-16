@@ -1,0 +1,18 @@
+{
+  "authz.AccessDenied": "دەستگەیشتن ڕێگەپێدراو نییە",
+  "authz.ActionNotAllowed": "ئەم کردارە بۆ ئەژماری تۆ ڕێگەپێدراو نییە.",
+  "authz.Administrator": "سەرپەرشتیاری گشتی",
+  "authz.ApiKeyInvalid": "کۆدی API نادروستە یان بەسەرچووە.",
+  "authz.Authorized": "مۆڵەتپێدراو",
+  "authz.IPBlocked": "ناونیشانی IPی تۆ بەهۆکاری پاراستنی ئاسایش بلۆک کراوە.",
+  "authz.Manager": "بەڕێوەبەر",
+  "authz.Moderator": "سەرنووسەر / چاودێر",
+  "authz.NoPermission": "تۆ مۆڵەتی پێویستت نییە بۆ بینینی ئەم لاپەڕەیە.",
+  "authz.PermissionDenied": "داواکارییەکەت ڕەتکرایەوە بەهۆی نەبوونی مۆڵەتەوە.",
+  "authz.RequiresApproval": "ئەم کردارە پێویستی بە ڕەزامەندی بەڕێوەبەر هەیە.",
+  "authz.RoleRequired": "ئەم بەشە پێویستی بە دەسەڵاتی {0} هەیە.",
+  "authz.SuperAdmin": "سەرپەرشتیاری باڵا",
+  "authz.TokenInvalid": "تۆکنی دەسەڵاتپێدان نادروستە.",
+  "authz.Unauthorized": "مۆڵەتپێنەدراو",
+  "authz.User": "بەکارهێنەر"
+}

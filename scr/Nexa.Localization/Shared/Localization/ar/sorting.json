@@ -1,0 +1,18 @@
+{
+  "sorting.Alphabetical": "أبجدياً",
+  "sorting.Ascending": "تصاعدي",
+  "sorting.ClearSort": "إلغاء الفرز",
+  "sorting.Descending": "تنازلي",
+  "sorting.DragToSort": "اسحب للترتيب",
+  "sorting.MostPopular": "الأكثر شيوعاً",
+  "sorting.Newest": "الأحدث",
+  "sorting.Oldest": "الأقدم",
+  "sorting.PriceHighToLow": "السعر: من الأعلى إلى الأقل",
+  "sorting.PriceLowToHigh": "السعر: من الأقل إلى الأعلى",
+  "sorting.Rating": "حسب التقييم",
+  "sorting.RecentlyUpdated": "المحدث مؤخراً",
+  "sorting.Relevance": "الأكثر ملاءمة",
+  "sorting.Sort": "فرز",
+  "sorting.SortBy": "فرز حسب",
+  "sorting.SortOrder": "ترتيب الفرز"
+}

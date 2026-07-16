@@ -1,0 +1,18 @@
+{
+  "pagination.All": "هەموو",
+  "pagination.First": "لاپەڕەی یەکەم",
+  "pagination.GoToPage": "بچۆ بۆ لاپەڕەی",
+  "pagination.Items": "بڕگەکان",
+  "pagination.JumpTo": "بازدان بۆ",
+  "pagination.Last": "لاپەڕەی کۆتایی",
+  "pagination.Next": "لاپەڕەی داهاتوو",
+  "pagination.NoData": "هیچ زانیارییەک بۆ پیشاندان نییە.",
+  "pagination.Of": "لە",
+  "pagination.Page": "لاپەڕە",
+  "pagination.Previous": "لاپەڕەی پێشوو",
+  "pagination.RowsPerPage": "ڕیزەکان لە هەر لاپەڕەیەکدا:",
+  "pagination.Showing": "پیشاندانی",
+  "pagination.ShowingRange": "پیشاندانی {0} بۆ {1} لە کۆی {2} تۆمار",
+  "pagination.To": "بۆ",
+  "pagination.TotalRecords": "کۆی گشتی تۆمارەکان: {0}"
+}

@@ -1,0 +1,10 @@
+{
+  "message.ActionRequired": "پێویستە کردارێک ئەنجام بدەیت بۆ بەردەوامبوون.",
+  "message.FeatureNotAvailable": "ئەم تایبەتمەندییە لە ئێستادا بەردەست نییە.",
+  "message.Loading": "باردەکرێت... تکایە چاوەڕوان بە.",
+  "message.NoData": "هیچ داتایەک بەردەست نییە.",
+  "message.PleaseWait": "تکایە چاوەڕوان بە...",
+  "message.Processing": "لەکاری جێبەجێکردندایە...",
+  "message.UnderMaintenance": "سیستمەکە لە ژێر چاکسازیدایە. بەم زووانە دەگەڕێینەوە.",
+  "message.Welcome": "بەخێربێیت بۆ سیستمەکەمان."
+}

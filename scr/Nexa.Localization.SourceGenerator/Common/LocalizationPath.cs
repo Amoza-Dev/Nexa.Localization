@@ -13,13 +13,11 @@ internal static class LocalizationPath
     {
         var normalizedPath = Normalize(path);
 
-        // Shared/Localization/ar/buttons.json
         var parts = normalizedPath.Split('/');
 
         if (parts.Length >= 2)
             return parts[parts.Length - 2];
 
-        // Nexa.Localization.SourceGenerator.DefaultJson.ar.buttons.json
         var resourceParts = path.Split('.');
 
         var index = Array.IndexOf(resourceParts, "DefaultJson");

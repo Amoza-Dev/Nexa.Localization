@@ -3,10 +3,7 @@
     <File Path="README.ar.md" />
     <File Path="README.ckb.md" />
   </Folder>
-  <Folder Name="/samples/">
-    <Project Path="Nexa.Localization.B/Nexa.Localization.B.csproj" Id="5bc7f719-2536-4c5c-a573-eff4086314c7" />
-    <Project Path="Nexa.Localization.Console/Nexa.Localization.Console.csproj" Id="0d771532-eccd-43b8-9408-9f8dbfa76e93" />
-  </Folder>
+  <Folder Name="/samples/" />
   <Folder Name="/Solution Items/">
     <File Path="CHANGELOG.md" />
     <File Path="LICENSE" />

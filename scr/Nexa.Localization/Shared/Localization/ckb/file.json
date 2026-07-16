@@ -1,0 +1,18 @@
+{
+  "file.AllowedFormats": "جۆرە ڕێگەپێدراوەکان: {0}",
+  "file.Attachment": "هاوپێچ",
+  "file.Attachments": "هاوپێچەکان",
+  "file.ChooseFile": "هەڵبژاردنی فایل",
+  "file.DeleteFile": "سڕینەوەی فایل",
+  "file.Download": "داگرتن",
+  "file.DragAndDrop": "فایلەکان لێرە ڕابکێشە و دایبنێ",
+  "file.DefaultFile": "فایل",
+  "file.FileName": "ناوی فایل",
+  "file.Files": "فایلەکان",
+  "file.FileSize": "قەبارەی فایل",
+  "file.FileType": "جۆری فایل",
+  "file.MaxFileSize": "زۆرترین قەبارەی ڕێگەپێدراو: {0}",
+  "file.Upload": "بارکردن",
+  "file.UploadFailed": "بارکردنی فایلەکە سەرنەکەوت.",
+  "file.UploadSuccess": "فایلەکە بە سەرکەوتوویی بارکرا."
+}

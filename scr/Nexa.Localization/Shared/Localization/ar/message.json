@@ -1,0 +1,10 @@
+{
+  "message.ActionRequired": "يتطلب اتخاذ إجراء للمتابعة.",
+  "message.FeatureNotAvailable": "هذه الميزة غير متوفرة حالياً.",
+  "message.Loading": "جاري التحميل... يرجى الانتظار.",
+  "message.NoData": "لا توجد بيانات متاحة.",
+  "message.PleaseWait": "يرجى الانتظار...",
+  "message.Processing": "جاري المعالجة...",
+  "message.UnderMaintenance": "النظام قيد الصيانة حالياً. سنعود قريباً.",
+  "message.Welcome": "مرحباً بك في نظامنا."
+}

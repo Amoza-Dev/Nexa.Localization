@@ -1,0 +1,18 @@
+{
+  "pagination.All": "All",
+  "pagination.First": "First Page",
+  "pagination.GoToPage": "Go to page",
+  "pagination.Items": "items",
+  "pagination.JumpTo": "Jump to",
+  "pagination.Last": "Last Page",
+  "pagination.Next": "Next Page",
+  "pagination.NoData": "No data available.",
+  "pagination.Of": "of",
+  "pagination.Page": "Page",
+  "pagination.Previous": "Previous Page",
+  "pagination.RowsPerPage": "Rows per page:",
+  "pagination.Showing": "Showing",
+  "pagination.ShowingRange": "Showing {0} to {1} of {2} entries",
+  "pagination.To": "to",
+  "pagination.TotalRecords": "Total records: {0}"
+}
