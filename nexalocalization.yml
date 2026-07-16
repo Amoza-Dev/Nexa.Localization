@@ -1,0 +1,3 @@
+files:
+  - source: /scr/Nexa.Localization/Shared/Localization/en/*.json
+    translation: /src/Nexa.Localization/Shared/Localization/%locale%/%original_file_name%
