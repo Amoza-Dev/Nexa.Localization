@@ -1,0 +1,18 @@
+{
+  "search.AdvancedSearch": "Advanced Search",
+  "search.ClearHistory": "Clear Search History",
+  "search.MinCharacters": "Please type at least {0} characters to search.",
+  "search.NoResults": "No results found.",
+  "search.RecentSearches": "Recent Searches",
+  "search.ResultsCount": "{0} results found",
+  "search.DefaultSearch": "Search",
+  "search.SearchAll": "Search All",
+  "search.SearchBy": "Search by",
+  "search.SearchFilters": "Search Filters",
+  "search.SearchHere": "Search here...",
+  "search.Searching": "Searching...",
+  "search.SearchPlaceholder": "Search...",
+  "search.SearchResults": "Search Results",
+  "search.Suggestions": "Suggestions",
+  "search.TypeToSearch": "Type to search..."
+}
