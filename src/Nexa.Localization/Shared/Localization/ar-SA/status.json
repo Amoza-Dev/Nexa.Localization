@@ -1,0 +1,20 @@
+{
+  "status.active": "Active",
+  "status.inactive": "Inactive",
+  "status.pending": "Pending",
+  "status.approved": "Approved",
+  "status.rejected": "Rejected",
+  "status.draft": "Draft",
+  "status.published": "Published",
+  "status.archived": "Archived",
+  "status.loading": "Loading...",
+  "status.processing": "Processing...",
+  "status.completed": "Completed",
+  "status.cancelled": "Cancelled",
+  "status.failed": "Failed",
+  "status.paid": "Paid",
+  "status.unpaid": "Unpaid",
+  "status.refunded": "Refunded",
+  "status.online": "Online",
+  "status.offline": "Offline"
+}
