@@ -1,0 +1,12 @@
+{
+  "table.id": "No.",
+  "table.actions": "Actions",
+  "table.noData": "No data available",
+  "table.total": "Total",
+  "table.showing": "Showing {0} of {1}",
+  "table.perPage": "Per page",
+  "table.page": "Page",
+  "table.sortBy": "Sort by",
+  "table.ascending": "Ascending",
+  "table.descending": "Descending"
+}
