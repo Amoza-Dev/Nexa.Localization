@@ -16,6 +16,9 @@
   <Folder Name="/src/Nexa.Localization.SourceGenerator/">
     <Project Path="scr/Nexa.Localization.SourceGenerator/Nexa.Localization.SourceGenerator.csproj" />
   </Folder>
+  <Folder Name="/src/Nexa.Localization.Tools/">
+    <Project Path="scr/Nexa.Localization.Tools/Nexa.Localization.Tools.csproj" Id="b5c0cacc-d797-4824-9f44-e45694be2c57" />
+  </Folder>
   <Folder Name="/src/Nexa.Localization/">
     <Project Path="scr/Nexa.Localization/Nexa.Localization.csproj" />
   </Folder>

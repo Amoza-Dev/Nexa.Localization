@@ -1,56 +1,40 @@
 ﻿# Nexa.Localization
 
-A modern, high-performance localization framework for .NET.
+A modern, strongly typed localization framework for .NET powered by JSON resources and Roslyn Incremental Source Generators.
 
-**Nexa.Localization** is a lightweight, strongly typed localization framework powered by JSON resources and Roslyn Incremental Source Generators. It provides compile-time localization keys, runtime language switching, dependency injection, startup validation, and a clean architecture that works across multiple .NET platforms.
+## Why Nexa.Localization?
 
----
+Nexa.Localization is designed for modern .NET applications that require a fast, maintainable, and scalable localization system.
 
-## Features
+It combines JSON-based resources with compile-time generated localization keys to eliminate magic strings, improve developer productivity, and provide excellent runtime performance.
 
-### Localization
+### Features
 
 - JSON-based localization
 - Strongly typed localization keys
+- Roslyn Incremental Source Generator
 - Runtime language switching
 - Multiple language support
 - Fallback culture support
 - Right-to-left (RTL) support
-
-### Performance
-
-- High-performance localization lookup
-- Thread-safe localization cache
-- Startup validation
-- Minimal allocations
-
-### Developer Experience
-
-- Incremental Source Generator
-- IntelliSense support
-- Compile-time safety
-- Refactoring friendly
-- No magic strings
 - Dependency Injection integration
-
-### Architecture
-
-- Clean Architecture
+- Startup validation
+- Thread-safe caching
+- High-performance lookup
 - Cross-platform
-- UI framework independent
-- Extensible provider architecture
+- Framework independent
 
 ---
 
-## Supported Platforms
+# Supported Platforms
 
-- ASP.NET Core
-- Blazor
-- WinForms
-- WPF
-- .NET MAUI
-- Console Applications
-- Class Libraries
+- ✅ ASP.NET Core
+- ✅ Blazor
+- ✅ WinForms
+- ✅ WPF
+- ✅ .NET MAUI
+- ✅ Console Applications
+- ✅ Class Libraries
 
 ---
 
@@ -72,7 +56,7 @@ dotnet add package Nexa.Localization.SourceGenerator
 
 # Quick Start
 
-## 1. Register Services
+## Register Localization
 
 ```csharp
 builder.Services.AddNexaLocalization(options =>
@@ -86,7 +70,7 @@ builder.Services.AddNexaLocalization(options =>
 
 ---
 
-## 2. Initialize Localization
+## Initialize Localization
 
 ```csharp
 var app = builder.Build();
@@ -98,36 +82,22 @@ app.Run();
 
 ---
 
-# Localization Structure
+## Folder Structure
 
 ```
 Shared/
 └── Localization/
     ├── ckb/
-    │   ├── button.json
-    │   ├── status.json
-    │   ├── invoice.json
-    │   └── ...
-    │
     ├── en/
-    │   ├── button.json
-    │   ├── status.json
-    │   ├── invoice.json
-    │   └── ...
-    │
     └── ar/
-        ├── button.json
-        ├── status.json
-        ├── invoice.json
-        └── ...
 ```
 
 Example:
 
 ```json
 {
-  "button.save": "Save",
-  "button.cancel": "Cancel"
+    "button.save": "Save",
+    "button.cancel": "Cancel"
 }
 ```
 
@@ -135,43 +105,55 @@ Example:
 
 # Using Generated Keys
 
-Simply use the generated localization keys.
-
-```razor
-<h3>@NexaKeys.Button.Save</h3>
-
-<button>@NexaKeys.Button.Cancel</button>
-
-<span>@NexaKeys.Status.Active</span>
-```
-
-No service injection is required.
-
----
-
-# Source Generator
-
-The Incremental Source Generator automatically generates strongly typed localization keys.
-
-Generated example:
+The Source Generator automatically generates strongly typed localization keys.
 
 ```csharp
 NexaKeys.Button.Save
 
 NexaKeys.Button.Cancel
 
-NexaKeys.Status.Active
+NexaKeys.Dialog.Confirm
 
-NexaKeys.Invoice.Create.Success
+NexaKeys.Validation.Required
 ```
 
-## Benefits
+Example in Razor:
 
-- IntelliSense
+```razor
+<button>@NexaKeys.Button.Save</button>
+
+<span>@NexaKeys.Status.Active</span>
+```
+
+### Benefits
+
+- IntelliSense support
 - Compile-time safety
 - No magic strings
 - Refactoring friendly
 - Better performance
+
+---
+
+# Built-in Resource Library
+
+Nexa.Localization ships with a production-ready localization resource library.
+
+Current library includes:
+
+| Item | Count |
+|------|------:|
+| Languages | 3 |
+| JSON Files | 87 |
+| Localization Keys | 2,469 |
+
+Supported languages:
+
+- English (en)
+- Kurdish (ckb)
+- Arabic (ar)
+
+See **ResourceLibrary.md** for the complete resource reference.
 
 ---
 
@@ -181,16 +163,10 @@ NexaKeys.Invoice.Create.Success
 builder.Services.AddNexaLocalization(options =>
 {
     options.DefaultCulture = "ckb";
-
     options.FallbackCulture = "en";
 
     options.EnableCaching = true;
-
     options.ValidateOnStartup = true;
-
-    options.ThrowIfKeyNotFound = false;
-
-    options.ReloadOnChange = false;
 
     options.AddDefaultLanguages();
 });
@@ -210,7 +186,7 @@ options.AddArabic();
 options.AddDefaultLanguages();
 ```
 
-Or register your own language.
+Register your own language:
 
 ```csharp
 options.AddLanguage(
@@ -221,76 +197,57 @@ options.AddLanguage(
 
 ---
 
-# Project Structure
-
-```
-Nexa.Localization
-│
-├── Abstractions
-├── Caching
-├── Exceptions
-├── Extensions
-├── Helpers
-├── Models
-├── Providers
-├── Runtime
-├── Services
-├── Storage
-└── Validation
-```
-
-Platform-specific integrations are distributed as separate packages.
-
----
-
 # Packages
 
-| Package | Description |
-|---------|-------------|
-| Nexa.Localization | Core localization framework |
-| Nexa.Localization.SourceGenerator | Strongly typed localization keys |
-| Nexa.Localization.Blazor *(Coming Soon)* | Blazor integration |
-| Nexa.Localization.WinForms *(Planned)* | WinForms integration |
-| Nexa.Localization.WPF *(Planned)* | WPF integration |
-| Nexa.Localization.MAUI *(Planned)* | .NET MAUI integration |
-
----
-
-# Roadmap
-
-### Version 1.x
-
-- Blazor integration
-- WinForms integration
-- WPF integration
-- MAUI integration
-- Cookie language storage
-- Browser LocalStorage
-- Session storage
-- Database language storage
-- Embedded resource provider
-- Project resource overriding
-- Performance benchmarks
+| Package | Status | Description |
+|---------|:------:|-------------|
+| Nexa.Localization | ✅ | Core localization framework |
+| Nexa.Localization.SourceGenerator | ✅ | Strongly typed localization keys |
+| Nexa.Localization.Blazor | 🚧 | Blazor integration |
+| Nexa.Localization.WinForms | 📅 | Planned |
+| Nexa.Localization.WPF | 📅 | Planned |
+| Nexa.Localization.MAUI | 📅 | Planned |
 
 ---
 
 # Documentation
 
-Documentation includes:
+Documentation is organized into dedicated guides.
 
 - Getting Started
 - Installation
 - Configuration
 - Source Generator
+- Resource Library
 - Runtime API
 - Best Practices
 - Samples
+- AI Translation *(Planned)*
 
-Documentation will be available in:
+---
 
-- English
-- Kurdish
-- Arabic
+# Roadmap
+
+## Version 1.x
+
+- Blazor integration
+- WinForms integration
+- WPF integration
+- .NET MAUI integration
+- Cookie language storage
+- Browser LocalStorage
+- Session storage
+- Database language storage
+- Performance benchmarks
+
+## Future
+
+- AI Translation
+- AI Resource Suggestions
+- AI Missing Key Detection
+- Cloud Resource Synchronization
+- Visual Studio Extension
+- CLI Tools
 
 ---
 

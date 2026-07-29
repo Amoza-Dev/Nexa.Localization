@@ -1,8 +1,8 @@
 ﻿# Nexa.Localization
 
-**Nexa.Localization** فریموێرکێکی خێرا، سووک و مۆدێرنە بۆ بەڕێوەبردنی زمان (Localization) لە .NET.
+فریموێرکێکی مۆدێرن، خێرا و بەهێز بۆ بەڕێوەبردنی Localization لە .NET.
 
-ئەم فریموێرکە پشتگیری دەکات لە JSON، کلیلە بەهێزەکان (Strongly Typed Keys) بە بەکارهێنانی Roslyn Incremental Source Generator، گۆڕینی زمان لە کاتی جێبەجێکردن (Runtime)، Dependency Injection، پشکنینی هەڵە لە کاتی دەستپێکردن و دیزاینێکی پاک کە سەربەخۆیە لە هەر UI Framework ـێک.
+**Nexa.Localization** فریموێرکێکی سووک و Strongly Typed ـە کە بە JSON Resources و Roslyn Incremental Source Generator دروستکراوە. ئەم فریموێرکە کلیلەکانی Localization لە کاتی Compile دروست دەکات، گۆڕینی زمان لە Runtime، Dependency Injection، Startup Validation و دیزاینێکی پاک و سەربەخۆ لە UI Framework دابین دەکات.
 
 ---
 
@@ -17,29 +17,23 @@
 - Fallback Culture
 - پشتگیری لە RTL
 
----
-
-## کارایی (Performance)
+## Performance
 
 - خێرایی زۆر بەرز
 - Thread-safe Localization Cache
 - Startup Validation
 - کەمترین بەکارهێنانی Memory
 
----
-
 ## Developer Experience
 
-- Incremental Source Generator
+- Roslyn Incremental Source Generator
 - IntelliSense
 - Compile-time Safety
 - Refactoring Friendly
-- بێ بەکارهێنانی Magic String
-- Dependency Injection
+- بێ Magic Strings
+- Dependency Injection Integration
 
----
-
-## دیزاین
+## Architecture
 
 - Clean Architecture
 - Cross-platform
@@ -62,13 +56,13 @@
 
 # دامەزراندن
 
-دامەزراندنی پەکێجی سەرەکی.
+دامەزراندنی پەکێجی سەرەکی:
 
 ```bash
 dotnet add package Nexa.Localization
 ```
 
-دامەزراندنی Source Generator.
+دامەزراندنی Source Generator:
 
 ```bash
 dotnet add package Nexa.Localization.SourceGenerator
@@ -90,8 +84,6 @@ builder.Services.AddNexaLocalization(options =>
 });
 ```
 
----
-
 ## ٢. دەستپێکردنی Localization
 
 ```csharp
@@ -104,36 +96,22 @@ app.Run();
 
 ---
 
-# ڕێکخستنی Localization
+# پێکهاتەی Localization
 
-```
+```text
 Shared/
 └── Localization/
     ├── ckb/
-    │   ├── button.json
-    │   ├── status.json
-    │   ├── invoice.json
-    │   └── ...
-    │
     ├── en/
-    │   ├── button.json
-    │   ├── status.json
-    │   ├── invoice.json
-    │   └── ...
-    │
     └── ar/
-        ├── button.json
-        ├── status.json
-        ├── invoice.json
-        └── ...
 ```
 
-نمونە:
+نمونەی فایل:
 
 ```json
 {
-  "button.save": "پاشەکەوت",
-  "button.cancel": "هەڵوەشاندنەوە"
+    "button.save": "پاشەکەوت",
+    "button.cancel": "هەڵوەشاندنەوە"
 }
 ```
 
@@ -141,25 +119,7 @@ Shared/
 
 # بەکارهێنانی Strongly Typed Keys
 
-تەنها کلیلە دروستکراوەکان بەکاربهێنە.
-
-```razor
-<h3>@NexaKeys.Button.Save</h3>
-
-<button>@NexaKeys.Button.Cancel</button>
-
-<span>@NexaKeys.Status.Active</span>
-```
-
-پێویست ناکات `ILocalizationService` Inject بکەیت.
-
----
-
-# Source Generator
-
-Incremental Source Generator بە شێوەی خۆکار کلیلەکان دروست دەکات.
-
-نمونە:
+Source Generator بە شێوەی خۆکار هەموو Localization Key ـەکان دەگۆڕێت بۆ C# Properties.
 
 ```csharp
 NexaKeys.Button.Save
@@ -168,18 +128,46 @@ NexaKeys.Button.Cancel
 
 NexaKeys.Status.Active
 
-NexaKeys.Invoice.Create.Success
+NexaKeys.Dialog.Confirm
 ```
 
----
+لە Razor:
 
-## سوودەکان
+```razor
+<button>@NexaKeys.Button.Save</button>
+
+<span>@NexaKeys.Status.Active</span>
+```
+
+سوودەکان:
 
 - IntelliSense
 - Compile-time Safety
+- بێ Magic Strings
 - Refactoring Friendly
-- بێ Magic String
 - کارایی باشتر
+
+---
+
+# Resource Library
+
+Nexa.Localization لەگەڵ کۆمەڵێک Localization Resource ـی ئامادە دێت.
+
+### ئاماری ئێستا
+
+| بابەت | ژمارە |
+|-------|------:|
+| زمان | 3 |
+| JSON Files | 87 |
+| Localization Keys | 2,469 |
+
+زمانە پشتگیریکراوەکان:
+
+- English (en)
+- کوردی (ckb)
+- العربية (ar)
+
+بۆ بینینی تەواوی فایلەکان و Localization Key ـەکان، `ResourceLibrary.md` بخوێنەوە.
 
 ---
 
@@ -189,16 +177,10 @@ NexaKeys.Invoice.Create.Success
 builder.Services.AddNexaLocalization(options =>
 {
     options.DefaultCulture = "ckb";
-
     options.FallbackCulture = "en";
 
     options.EnableCaching = true;
-
     options.ValidateOnStartup = true;
-
-    options.ThrowIfKeyNotFound = false;
-
-    options.ReloadOnChange = false;
 
     options.AddDefaultLanguages();
 });
@@ -207,8 +189,6 @@ builder.Services.AddNexaLocalization(options =>
 ---
 
 # زیادکردنی زمان
-
-زمانە بنەڕەتییەکان:
 
 ```csharp
 options.AddKurdish();
@@ -220,7 +200,7 @@ options.AddArabic();
 options.AddDefaultLanguages();
 ```
 
-یان زمانی خۆت زیاد بکە.
+یان زمانی خۆت زیاد بکە:
 
 ```csharp
 options.AddLanguage(
@@ -231,76 +211,64 @@ options.AddLanguage(
 
 ---
 
-# پێکهاتەی پڕۆژە
-
-```
-Nexa.Localization
-│
-├── Abstractions
-├── Caching
-├── Exceptions
-├── Extensions
-├── Helpers
-├── Models
-├── Providers
-├── Runtime
-├── Services
-├── Storage
-└── Validation
-```
-
-پەکێجە تایبەتەکانی هەر Platform ـێک بە جیاوازی بڵاودەکرێنەوە.
-
----
-
 # پەکێجەکان
 
-| پەکێج | دەربارە |
-|--------|----------|
-| Nexa.Localization | فریموێرکی سەرەکی |
-| Nexa.Localization.SourceGenerator | دروستکردنی Strongly Typed Keys |
-| Nexa.Localization.Blazor *(بەزوویی)* | یەکگرتن لەگەڵ Blazor |
-| Nexa.Localization.WinForms *(لە پلاندانایە)* | پشتگیری WinForms |
-| Nexa.Localization.WPF *(لە پلاندانایە)* | پشتگیری WPF |
-| Nexa.Localization.MAUI *(لە پلاندانایە)* | پشتگیری .NET MAUI |
+| پەکێج | دۆخ | دەربارە |
+|--------|:---:|----------|
+| Nexa.Localization | ✅ | فریموێرکی سەرەکی |
+| Nexa.Localization.SourceGenerator | ✅ | Strongly Typed Keys |
+| Nexa.Localization.Blazor | 🚧 | بەزوویی |
+| Nexa.Localization.WinForms | 📅 | لە پلاندانایە |
+| Nexa.Localization.WPF | 📅 | لە پلاندانایە |
+| Nexa.Localization.MAUI | 📅 | لە پلاندانایە |
 
 ---
 
-# پلانی داهاتوو
+# ڕێگای داهاتوو (Roadmap)
 
 ## Version 1.x
 
 - Blazor Integration
 - WinForms Integration
 - WPF Integration
-- MAUI Integration
+- .NET MAUI Integration
 - Cookie Language Storage
 - Browser LocalStorage
 - Session Storage
 - Database Storage
-- Embedded Resource Provider
-- Resource Overriding
 - Performance Benchmarks
+
+## داهاتوو
+
+- AI Translation
+- AI Resource Suggestions
+- AI Missing Key Detection
+- Cloud Resource Synchronization
+- Visual Studio Extension
+- CLI Tools
 
 ---
 
 # بەڵگەنامە
 
-بەڵگەنامەکان لە داهاتوودا ئەمانە لەخۆ دەگرن:
+بەڵگەنامەکانی Nexa.Localization بریتین لە:
 
 - دەستپێکردن
 - دامەزراندن
 - ڕێکخستن
 - Source Generator
+- Resource Library
 - Runtime API
-- Best Practices
+- باشترین شێوازەکانی بەکارهێنان
 - نموونە پڕۆژەکان
 
-بەڵگەنامە بە سێ زمان ئامادە دەبێت:
+بەڵگەنامەکان بە زمانی:
 
-- 🇬🇧 English
-- 🇹🇯 کوردی
-- 🇸🇦 العربية
+- English
+- کوردی
+- العربية
+
+بڵاودەکرێنەوە.
 
 ---
 
