@@ -1,0 +1,18 @@
+{
+  "sorting.Alphabetical": "Alphabetical",
+  "sorting.Ascending": "Ascending",
+  "sorting.ClearSort": "Clear Sort",
+  "sorting.Descending": "Descending",
+  "sorting.DragToSort": "Drag to sort",
+  "sorting.MostPopular": "Most Popular",
+  "sorting.Newest": "Newest",
+  "sorting.Oldest": "Oldest",
+  "sorting.PriceHighToLow": "Price: High to Low",
+  "sorting.PriceLowToHigh": "Price: Low to High",
+  "sorting.Rating": "By Rating",
+  "sorting.RecentlyUpdated": "Recently Updated",
+  "sorting.Relevance": "Relevance",
+  "sorting.Sort": "Sort",
+  "sorting.SortBy": "Sort By",
+  "sorting.SortOrder": "Sort Order"
+}

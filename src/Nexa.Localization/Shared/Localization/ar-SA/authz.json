@@ -1,0 +1,18 @@
+{
+  "authz.AccessDenied": "Access Denied",
+  "authz.ActionNotAllowed": "This action is not allowed for your account.",
+  "authz.Administrator": "Administrator",
+  "authz.ApiKeyInvalid": "The API key is invalid or has expired.",
+  "authz.Authorized": "Authorized",
+  "authz.IPBlocked": "Your IP address has been blocked for security reasons.",
+  "authz.Manager": "Manager",
+  "authz.Moderator": "Moderator",
+  "authz.NoPermission": "You do not have the required permissions to view this page.",
+  "authz.PermissionDenied": "Your request was denied due to lack of permission.",
+  "authz.RequiresApproval": "This action requires management approval first.",
+  "authz.RoleRequired": "This section requires the {0} role.",
+  "authz.SuperAdmin": "Super Admin",
+  "authz.TokenInvalid": "The authorization token is invalid.",
+  "authz.Unauthorized": "Unauthorized",
+  "authz.User": "User"
+}

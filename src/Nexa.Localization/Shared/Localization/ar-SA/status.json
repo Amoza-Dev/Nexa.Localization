@@ -1,0 +1,18 @@
+{
+  "status.Connected": "Connected",
+  "status.Connecting": "Connecting...",
+  "status.Disconnected": "Disconnected",
+  "status.Healthy": "Healthy",
+  "status.LoadingData": "Loading data...",
+  "status.Maintenance": "Maintenance",
+  "status.Offline": "Offline",
+  "status.Online": "Online",
+  "status.Ready": "Ready",
+  "status.ServerRunning": "Server Running",
+  "status.ServerStopped": "Server Stopped",
+  "status.Synced": "Synced",
+  "status.SyncFailed": "Sync failed",
+  "status.Syncing": "Syncing...",
+  "status.Unhealthy": "Unhealthy",
+  "status.Updating": "Updating..."
+}

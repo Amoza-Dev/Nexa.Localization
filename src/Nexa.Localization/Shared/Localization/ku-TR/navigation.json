@@ -1,0 +1,21 @@
+{
+  "nav.home": "Home",
+  "nav.dashboard": "Dashboard",
+  "nav.profile": "Profile",
+  "nav.settings": "Settings",
+  "nav.notifications": "Notifications",
+  "nav.messages": "Messages",
+  "nav.reports": "Reports",
+  "nav.analytics": "Analytics",
+  "nav.users": "Users",
+  "nav.products": "Products",
+  "nav.orders": "Orders",
+  "nav.categories": "Categories",
+  "nav.blog": "Blog",
+  "nav.about": "About",
+  "nav.contact": "Contact",
+  "nav.help": "Help",
+  "nav.faq": "FAQ",
+  "nav.terms": "Terms",
+  "nav.privacy": "Privacy"
+}

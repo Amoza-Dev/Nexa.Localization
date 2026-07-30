@@ -1,0 +1,18 @@
+{
+  "success.Approved": "Approved successfully.",
+  "success.Copied": "Copied to clipboard.",
+  "success.Created": "Created successfully.",
+  "success.Deleted": "Deleted successfully.",
+  "success.LoggedIn": "Logged in successfully.",
+  "success.LoggedOut": "Logged out successfully.",
+  "success.OperationCompleted": "Operation completed successfully.",
+  "success.PasswordChanged": "Password changed successfully.",
+  "success.ProfileUpdated": "Profile updated successfully.",
+  "success.Registered": "Registered successfully.",
+  "success.Rejected": "Rejected successfully.",
+  "success.Saved": "Saved successfully.",
+  "success.Sent": "Sent successfully.",
+  "success.Updated": "Updated successfully.",
+  "success.Uploaded": "Uploaded successfully.",
+  "success.Verified": "Verified successfully."
+}

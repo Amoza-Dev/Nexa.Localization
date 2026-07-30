@@ -1,0 +1,18 @@
+{
+  "file.AllowedFormats": "Allowed formats: {0}",
+  "file.Attachment": "Attachment",
+  "file.Attachments": "Attachments",
+  "file.ChooseFile": "Choose File",
+  "file.DeleteFile": "Delete File",
+  "file.Download": "Download",
+  "file.DragAndDrop": "Drag and drop files here",
+  "file.DefaultFile": "File",
+  "file.FileName": "File Name",
+  "file.Files": "Files",
+  "file.FileSize": "File Size",
+  "file.FileType": "File Type",
+  "file.MaxFileSize": "Maximum file size: {0}",
+  "file.Upload": "Upload",
+  "file.UploadFailed": "File upload failed.",
+  "file.UploadSuccess": "File uploaded successfully."
+}

@@ -1,0 +1,10 @@
+{
+  "warning.AccessLevel": "Be careful, modifying this section will affect the entire system.",
+  "warning.BetaFeature": "This is a beta feature and may contain bugs.",
+  "warning.DeleteConfirmation": "This action cannot be undone.",
+  "warning.LowBattery": "Battery level is low.",
+  "warning.SessionExpiring": "Your session is expiring soon.",
+  "warning.SlowConnection": "Slow internet connection. Some features may not work properly.",
+  "warning.StorageAlmostFull": "Storage is almost full.",
+  "warning.UnsavedChanges": "You have unsaved changes. Are you sure you want to leave?"
+}
